@@ -1,0 +1,28 @@
+<div class="card mb-4 shadow-sm">
+    <img class="bd-placeholder-img card-img-top p-2" width="100%"
+      src="/assets/mango.jpg" alt="image">
+  
+    <div class="card-body">
+      <p class="card-text">
+        <strong>Mango : {{ 50 | currency:'INR' }}</strong>    
+      </p>
+      <div *ngIf="show">
+      <div *ngFor="let item of stringObject">
+        <div>ID :{{item.id}}</div>
+        <div>Name :{{item.name}}</div>
+        <div>Cost :{{item.cost}}</div>
+        <div>Availability :{{item.availability}}</div>
+        <div>Details :{{item.details}}</div>
+        <div>Category :{{item.category}}</div>
+      </div>
+    </div>
+      <p class="card-text"></p>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <button type="button" class="btn btn-sm btn-primary product-btn">Add to Cart</button>
+          <button type="button" class="btn btn-sm btn-outline-secondary product-btn"  (click)="viewDetails()">View Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
